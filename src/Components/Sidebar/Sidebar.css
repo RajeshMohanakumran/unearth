@@ -1,0 +1,7 @@
+.Sidebar{
+    min-height: 100vh;
+    min-width: 37.9vh;
+    display: inline-flex;
+    flex-direction: column;
+    background-color:red;
+}

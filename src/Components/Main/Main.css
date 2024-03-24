@@ -1,0 +1,7 @@
+.Main{
+    min-height: 100vh;
+    min-width: 169vh;
+    display: inline-flex;
+    flex-direction: column;
+    background-color: blue;
+}
