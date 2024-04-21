@@ -1,0 +1,7 @@
+.main{
+    display:flex;
+}
+#root{
+    min-height: 100vh;
+    display:flex;
+}

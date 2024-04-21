@@ -4,7 +4,9 @@ import { assets } from '../../assets/assets';
 import { Context } from '../../config/context';
 import { useContext } from 'react';
 const Main = () => {
-    const { onSent, recentPrompt, showResult, loading, resultData, setInput, input } = useContext(Context);
+    const { onSent, recentPrompt, showResult, loading, resultData,setRecentPrompt, setInput, input,newChat} = useContext(Context);
+    
+
     return (
         <div className='mainn'>
             <div className="nav">
@@ -13,15 +15,17 @@ const Main = () => {
                 </div>
                 <div className="nav-menu" id="myNavMenu">
                     <ul className="nav_menu_list">
+                        
                         <li className="nav_list">
                             <a href="#home" className="nav-link">Home</a>
                         </li>
                         <li className="nav_list">
-                            <a href="#about" className="nav-link">About</a>
+                            <a href="#home" className="nav-link">About</a>
                         </li>
                         <li className="nav_list">
-                            <a href="#Contact" className="nav-link">Contact</a>
+                            <a href="#home" className="nav-link">Contact</a>
                         </li>
+                        
                     </ul>
                 </div> 
             </div>
@@ -45,7 +49,7 @@ const Main = () => {
 
                             </div>
                             <div className="card">
-                                <p>Can you recommend trategies for mine site rehabilition</p>
+                                <p>Can you recommend strategies for mine site rehabilition</p>
 
                             </div>
                             <div className="card">
@@ -60,21 +64,29 @@ const Main = () => {
                             <p>{recentPrompt}</p>
                         </div>
                         <div className="result-data">
-                            <img src={assets.gemini_icon} alt='' />
-                            <p dangerouslySetInnerHTML={{ __html: resultData }}></p>
+                        
+                            <img src={assets.code_icon} alt='' />
+                            {loading?
+                            <div className="loader">
+                                <p>Please wait</p>
+                            </div>:<p dangerouslySetInnerHTML={{ __html: resultData }}></p>
+                        }
+                            
                         </div>
                     </div>}
 
                 <div className="main-bottom">
+                    
                     <div className="search-box">
                         <input onChange={(e) => setInput(e.target.value)} value={input} type='text' placeholder='Enter prompt here...' />
                         <div>
+                            
                             <img onClick={() => onSent()} src={assets.send_icon} alt='' />
+                            
                         </div>
-
                     </div>
                     <p className="bottom-info">
-                        UnEarth may display inacurate information,so double check
+                        UnEarth can display inacurate information.Kindly check when searching important information
                     </p>
                 </div>
             </div>

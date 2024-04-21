@@ -1,11 +1,12 @@
 
 .sidebar{
-    width: 303.5px;
-    display:inline-flex ;
+    
+    width:39.1vh;
     flex-direction: column;
     justify-content: space-between;
     padding: 25px 30px;
     background-color: #0c1117fb;
+    /* background-color:  #0c1117; */
 }
 
 .sidebar img{
@@ -13,7 +14,15 @@
 }
 .sidebar .profile{
     display: flex;
-    margin-left: 190px;
+    margin-left: 180px;
+    cursor: pointer;
+}
+.sidebar .profile1{
+    display: flex;
+    width: 25px;
+    margin-top: 10px;
+    margin-left:209px;
+    margin-right: 20px;
     cursor: pointer;
 }
 .sidebar .pro{
@@ -62,8 +71,15 @@
     margin-bottom: 20px;
 
 }
-
+.sidebar .hist-scroll{
+    height: 47vh;
+    overflow-y: scroll;
+}
+.hist-scroll::-webkit-scrollbar{
+    display: none;
+}
 .sidebar .histories{
+    
     margin-top: 10px;
     display: flex;
     align-items: center;
@@ -96,4 +112,15 @@
     width:45px ;
     border-radius: 50px;
     padding: 5px 5px;
+}
+
+
+
+@media only screen and (max-width: 550px){
+    .sidebar{
+        display: none;
+    }
+    
+    
+   
 }

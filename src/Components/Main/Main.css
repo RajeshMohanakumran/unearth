@@ -1,6 +1,5 @@
 .mainn{
-    flex: 1;
-    min-width: 166vh;
+    width: 167.75vh;
     justify-content: space-between;
     padding-bottom: 15vh;
     position: relative;
@@ -39,7 +38,7 @@
 }
 .main-container{
     max-width: 900px;
-    padding-left: 10px;
+    padding-left: 15px;
     margin: auto;
 
 }
@@ -67,7 +66,7 @@
     gap: 20px;
     background-color: #f0f4f9;
     padding: 10px 20px;
-    border-radius: 50px;
+    border-radius: 30px;
 }
 
 .search-box .img{
@@ -88,7 +87,7 @@
     align-items: center;
 }
 .bottom-info{
-    padding-left: 205px;
+    padding-left:82px;
     color:white;
     margin: 8px 0px;
 }
@@ -113,6 +112,9 @@
     word-wrap: break-word;
 }
 
+.mainn .card:hover{
+    background-color:#a8a8a8 ;
+}
 
 .result{
     padding-right: 30px;
@@ -141,6 +143,9 @@
     border-radius: 50%;
 }
 
+.result-data p{
+    margin-top: 6px;
+}
 .result-data{
     display: flex;
     align-items: start;
@@ -151,4 +156,109 @@
     font-size: 19px;
     
     line-height: 1.4;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 1024px){
+    .mainn{
+        width: 97.8vh;   
+        padding-bottom: 5vh;
+        justify-content:start;
+      
+    }
+    .nav-link{
+        padding-inline: 8px;
+        margin-inline: 5px;
+    }
+    .bottom-info{
+        font-size: 13px;
+        padding:0 20px 0 0;
+        
+        color:white;
+        text-align: center;
+        
+    }
+    .mainn .cards{  
+         
+        margin-top: 5px;
+        margin-left: 0px;
+        margin-right: 5px;
+    }
+    .main-bottom .search-box{
+        width: 650px;
+    }
+    }
+
+@media only screen and (max-width: 900px) {
+    .mainn{
+        width: 64vh;   
+        padding-bottom: 5vh;
+        justify-content:start;
+      
+    }
+    .nav-link{
+        padding-inline: 8px;
+        margin-inline: 5px;
+    }
+    .bottom-info{
+        font-size: 13px;
+        padding:0 20px 0 0;
+        
+        color:white;
+        text-align: center;
+        
+    }
+    .mainn .cards{    
+        margin-top: 5px;
+        margin-left: 0px;
+        margin-right: 5px;
+    }
+    .main-bottom .search-box{
+        width: 420px;
+    }
+    
+    
+    
+}
+@media only screen and (max-width: 540px){
+    .mainn{
+        width: 65.3vh;   
+        padding-bottom: 5vh;
+        justify-content:start;
+      
+    }
+    .bottom-info{
+        font-size: 13px;
+        padding:0 20px 0 0;
+        
+        color:white;
+        text-align: center;
+        
+    }
+    .mainn .cards{    
+        margin-top: 5px;
+        margin-left: 0px;
+        margin-right: 5px;
+    }
+    
+    .main .greet{
+        margin:5px 10px;
+        font-size: 38px;
+        color: #c4c7c5;
+        font-weight: 500;
+        padding: 10px;
+    }
+    .nav-link{
+        padding-inline: 8px;
+        margin-inline: 5px;
+    }
+    .main-bottom .search-box{
+        width: 420px;
+    }
+    
+    
+    
+    
+    
 }
