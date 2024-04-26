@@ -59,6 +59,7 @@ html{
     border-radius: 10px;
     cursor: pointer;
     transition: .4s;
+    text-decoration: none;
 }
 .btn>i{
     margin-left: 10px;
@@ -129,7 +130,7 @@ nav{
 
 
 /* ----- WRAPPER DESIGN ----- */
-.wrapper{
+.wrapperr{
     padding-inline: 5vw;
 }
 

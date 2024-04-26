@@ -6,9 +6,11 @@ import ContextProvider from './config/context';
 import { BrowserRouter } from 'react-router-dom';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <ContextProvider>
-    <App/>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </ContextProvider>
-  
+
 );
 
 // If you want to start measuring performance in your app, pass a function

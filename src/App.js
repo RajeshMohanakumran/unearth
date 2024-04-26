@@ -1,16 +1,23 @@
 import React from 'react';
-import './App.css';
-import { Routes,Route,Link } from 'react-router-dom';
-import Main from './Components/Main/Main';
-import Sidebar from './Components/Sidebar/Sidebar';
 
+import { Routes, Route } from 'react-router-dom'
+import './ChatPage';
+import ChatPage from './ChatPage';
+import Homee from './Components/Homee/Homee';
+import LoginForm from './Components/LoginForm/LoginForm';
+import SignUpForm from './Components/SignUpForm/SignUpForm';
 function App() {
   return (
-    <div className='main'>
-      <Main/>
-      <Sidebar/>
+    <div>
+      
+      <Routes>
+        <Route path="/" element={<Homee />} />
+        <Route path="login/" element={<LoginForm />} />
+        <Route path="register/" element={<SignUpForm />} />
+        <Route path="chat/" element={<ChatPage />} />
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;

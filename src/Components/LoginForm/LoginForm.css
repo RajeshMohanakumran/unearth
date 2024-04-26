@@ -1,12 +1,4 @@
-.wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    border-radius: 15px;
-    padding: 30px 50px;
 
-}
 .wrapper h1{
     font-size: 25px;
     text-align: center;

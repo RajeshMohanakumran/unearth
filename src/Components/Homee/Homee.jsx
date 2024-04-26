@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Homee.css'
 import { assets } from '../../assets/assets';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom'
 import { faInstagram, faLinkedin, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
 const Homee = () => {
 
@@ -29,14 +30,14 @@ const Homee = () => {
                     </ul>
                 </div>
                 <div className="nav-button">
-                    <button className="btn">Login <i className="uil uil-file-alt"></i></button>
+                    <Link to="/login" className="btn">Login </Link>
                 </div>
                 <div className="nav-menu-btn">
                     <i className="uil uil-bars" onclick="myMenuFunction()"></i>
                 </div>
             </nav>
 
-            <main className="wrapper">
+            <main className="wrapperr">
 
                 <section className="featured-box" id="home">
 
@@ -52,8 +53,8 @@ const Homee = () => {
                         </div>
 
                         <div className="featured-text-btn">
-                            <button className="btn blue-btn">Chat With us &#x279C;</button>
-                            <button className="btn">Signup for free &#x279C;</button>
+                            <Link to="/chat" className="btn blue-btn">Chat With us &#x279C;</Link>
+                            <Link to="/register" className="btn">Signup for free &#x279C;</Link>
                         </div>
                         <div className="social_icons">
                             <div className="icon"><FontAwesomeIcon icon={faInstagram} /></div>

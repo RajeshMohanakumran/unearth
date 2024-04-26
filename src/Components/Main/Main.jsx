@@ -9,7 +9,7 @@ const Main = () => {
 
     return (
         <div className='mainn'>
-            <div className="nav">
+            <div className="navv">
                 <div className="nav-logo">
                     <p className="nav-name">UnEarth</p>
                 </div>
@@ -35,7 +35,7 @@ const Main = () => {
             <div className="main-container">
                 {!showResult ?
                     <>
-                        <div className="greet">
+                        <div className="greett">
                             <p><span>Hello...</span></p>
                             <p><span>How can i help you today?</span></p>
                         </div>
@@ -65,7 +65,7 @@ const Main = () => {
                         </div>
                         <div className="result-data">
                         
-                            <img src={assets.code_icon} alt='' />
+                            <img src={assets.profile} alt='' />
                             {loading?
                             <div className="loader">
                                 <p>Please wait</p>
