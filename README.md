@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# This repository is fullstack authentication using Django as backend and React as frontend.
+# This application use Json Web Token for authentication system.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Follow the instruction bellow to run this application in your local computer
+1. download or clone repository
 
-## Available Scripts
+2. open the folder in your conde editor
 
-In the project directory, you can run:
+3. Start from backend. Create virtual env inside of backend directory. In the terminal, ensure you are in backend directory. run this command "virtualenv env". If you have not install virtualenv in your computer, run this command before you create virtual env "pip install virtual env"
 
-### `npm start`
+4. Activate the env. In the terminal, run this command "env/Scripts/activate"
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+5. Install all package for backend. In the terminal, ensure you are in backend directory run this command "pip install -r requirements.txt"
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+6. Create ".env" file inside the backend directory
 
-### `npm test`
+7. Copy the content of ".env-example" and paste it in ".env"
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+8. You need to get SECRET_KEY, EMAIL_HOST_USER, EMAIL_HOST_PASSWORD. for getting EMAIL_HOST_USER and EMAIL_HOST_PASSWORD, wacth my video https://www.youtube.com/watch?v=2pBzVtevmJI 
 
-### `npm run build`
+9. For getting SECRET_KEY, create secret_key.py inside backend directory and put this code inside the secret_key.py
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+from django.core.management.utils import get_random_secret_key
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+print(get_random_secret_key())
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+10. Run this command in the terminal "python secret_key.py"
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+11. You will get new secret key in the terminal. Copy that and paste it in secret key. Dont use brackets, for example
+SECRET_KEY="the_secret_key"
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+12. Add "django-insecure-" in the front the_secret_key
+for example SECRET_KEY="django-insecure-the_secret_key"
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+13. Set DEBUG=True in .env
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+14. Run in the terminal "python manage.py makemigrations" and "python manage.py migrate"
 
-## Learn More
+15. Create super user "python manage.py createsuperuser"
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+16. Run django server in the terminal "python manage.py runserver"
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+17. Open admin site in the browser "http://localhost:8000/admin/
 
-### Code Splitting
+18. Select add social applications. and create a new one.
+wacth this video for adding social application https://www.youtube.com/watch?v=A22oOjoH5bQ
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+19. For running react in local, create new terminal and move your position in the terminal to frontend directory. run "cd frontend" in your terminal
 
-### Analyzing the Bundle Size
+20. Install all packages in react. run this command "yarn install"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+21. Open Login.jsx and change clientID with client id that you put in social applications in admin site. (frontend/src/Pages/Login.jsx)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+22. Test the application
